@@ -1,0 +1,4 @@
+accessKey: minioadmin
+secretKey: minioadmin
+bucket: backups
+endpoint: http://minio.minio.svc:9000

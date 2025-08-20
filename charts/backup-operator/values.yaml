@@ -1,0 +1,8 @@
+replicaCount: 1
+image:
+  repository: ghcr.io/you/backup-operator
+  tag: latest
+  pullPolicy: IfNotPresent
+serviceAccount:
+  create: true
+  name: ""

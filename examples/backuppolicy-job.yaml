@@ -1,0 +1,20 @@
+apiVersion: backup.dev/v1alpha1
+kind: BackupPolicy
+metadata:
+  name: postgres-job
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  schedule: "0 2 * * *"
+  retention: 7
+  backend:
+    type: s3
+    bucket: backups
+    endpoint: http://minio.minio.svc:9000
+    secretRef: minio-creds
+  strategy:
+    type: job
+    job:
+      image: ghcr.io/you/pgdump:latest
+      args: ["-h","svc","-U","user","-d","db"]

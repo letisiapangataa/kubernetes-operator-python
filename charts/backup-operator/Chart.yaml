@@ -1,0 +1,5 @@
+apiVersion: v2
+name: backup-operator
+version: 0.1.0
+description: A Kubernetes operator for managing backups of stateful apps
+appVersion: "0.1.0"

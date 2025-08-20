@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "kubernetes-operator-python"
+version = "0.1.0"
+description = "Kubernetes BackupPolicy Operator using Kopf"
+authors = ["letisiapangataa <your@email.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+kopf = "^1.36.3"
+kubernetes = "^29.0.0"
+boto3 = "^1.34.0"
+prometheus-client = "^0.20.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+flake8 = "^7.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

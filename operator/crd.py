@@ -1,0 +1,39 @@
+# CRD schema for BackupPolicy
+BACKUP_POLICY_CRD = {
+    "apiVersion": "apiextensions.k8s.io/v1",
+    "kind": "CustomResourceDefinition",
+    "metadata": {"name": "backuppolicies.backup.dev"},
+    "spec": {
+        "group": "backup.dev",
+        "versions": [{
+            "name": "v1alpha1",
+            "served": True,
+            "storage": True,
+            "schema": {
+                "openAPIV3Schema": {
+                    "type": "object",
+                    "properties": {
+                        "spec": {
+                            "type": "object",
+                            "properties": {
+                                "selector": {"type": "object"},
+                                "schedule": {"type": "string"},
+                                "retention": {"type": "integer"},
+                                "backend": {"type": "object"},
+                                "strategy": {"type": "object"}
+                            },
+                            "required": ["selector", "schedule", "retention", "backend", "strategy"]
+                        }
+                    }
+                }
+            }
+        }],
+        "scope": "Namespaced",
+        "names": {
+            "plural": "backuppolicies",
+            "singular": "backuppolicy",
+            "kind": "BackupPolicy",
+            "shortNames": ["bp"]
+        }
+    }
+}

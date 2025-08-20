@@ -1,0 +1,3 @@
+# RBAC for operator
+{{- $rbac := .Files.Get "../../operator/rbac.yaml" }}
+{{ $rbac }}
