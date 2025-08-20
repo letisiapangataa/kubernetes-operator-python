@@ -1,4 +1,4 @@
-# Kubernetes BackupPolicy Operator (Python/Kopf)
+# ❄️ Kubernetes BackupPolicy Operator - Python/Kopf (ALP)
 
 A production-grade Kubernetes operator for automating backups of stateful apps using PVC snapshots or S3-compatible storage. Ships with Helm, Prometheus metrics, and CI/CD via GitHub Actions.
 
