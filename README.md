@@ -2,7 +2,9 @@
 
 A **proof-of-concept Kubernetes operator** built to explore custom resource development and automation.  
 The operator manages backups for stateful applications using PVC snapshots or S3-compatible storage.  
-Includes a Helm chart for testing, basic Prometheus metrics, and a simple CI/CD pipeline with GitHub Actions.  
+Includes a Helm chart for testing, basic Prometheus metrics, and a simple CI/CD pipeline with GitHub Actions.
+
+For a detailed lab overview : https://letisiapangataa.github.io/posts/kubernetes-backup-operator-python/
 
 ---
 
